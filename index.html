@@ -1,306 +1,1201 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ruan's Lab at UTSA — computational biology, artificial intelligence, and precision genome engineering.">
-  <title>Ruan's Lab | UTSA</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
-  <script defer src="assets/script.js"></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <meta charset="UTF-8" />
 
-  <header class="site-header" id="top">
-    <div class="nav-shell">
-      <a class="brand" href="#home" aria-label="Ruan's Lab home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64" role="img">
-            <path d="M18 10c22 7 6 37 28 44"/>
-            <path d="M46 10c-22 7-6 37-28 44"/>
-            <path d="M20 18h24M17 28h30M17 38h30M20 48h24"/>
-          </svg>
-        </span>
-        <span class="brand-copy">
-          <strong>Ruan's Lab</strong>
-          <small>AI × Computational Biology</small>
-        </span>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Ruan's Lab at The University of Texas at San Antonio. Research in artificial intelligence, computational biology, genomics, and precision medicine."
+  />
+
+  <title>Ruan's Lab | UTSA</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Website CSS -->
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <!-- =======================================================
+       HEADER AND NAVIGATION
+  ======================================================== -->
+
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+
+      <!-- Logos -->
+      <a
+        class="brand"
+        href="#home"
+        aria-label="Ruan's Lab homepage"
+      >
+        <img
+          src="assets/images/utsa-logo.png"
+          alt="The University of Texas at San Antonio"
+          class="utsa-logo"
+        />
+
+        <span
+          class="logo-divider"
+          aria-hidden="true"
+        ></span>
+
+        <div class="lab-brand">
+          <img
+            src="assets/images/ruans-lab-logo.png"
+            alt="Ruan's Lab"
+            class="lab-logo"
+          />
+
+          <!--
+          If you do not yet have a lab logo, remove the image above
+          and use this text instead:
+
+          <div class="lab-name">
+            <strong>Ruan's Lab</strong>
+            <small>AI and Computational Biology</small>
+          </div>
+          -->
+        </div>
       </a>
 
-      <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="#home">Home</a>
-        <a href="#team">Team</a>
+      <!-- Desktop navigation -->
+      <nav
+        class="desktop-nav"
+        aria-label="Primary navigation"
+      >
+        <a href="#home">Ruan's Lab</a>
+        <a href="#people">People</a>
+        <a href="#news">Recent News</a>
         <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
         <a href="#positions">Open Positions</a>
-        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <div class="institution-lockup" aria-label="The University of Texas at San Antonio">
-        <span class="utsa-symbol">UTSA</span>
-        <span class="utsa-copy">The University of Texas<br>at San Antonio</span>
-      </div>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-        <span class="sr-only">Open navigation menu</span>
+      <!-- Mobile menu button -->
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open navigation menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+
     </div>
 
-    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
-      <a href="#home">Home</a>
-      <a href="#team">Team</a>
+    <!-- Mobile navigation -->
+    <nav
+      class="mobile-nav"
+      id="mobile-nav"
+      aria-label="Mobile navigation"
+      hidden
+    >
+      <a href="#home">Ruan's Lab</a>
+      <a href="#people">People</a>
+      <a href="#news">Recent News</a>
       <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
       <a href="#positions">Open Positions</a>
-      <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main id="main">
-    <section class="hero section" id="home" aria-labelledby="hero-title">
-      <div class="hero-orb hero-orb-one"></div>
-      <div class="hero-orb hero-orb-two"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Ruan's Lab · UTSA Computer Science</p>
-          <h1 id="hero-title">Learning from biology.<br><span>Engineering better intelligence.</span></h1>
-          <p class="hero-lead">We develop data-driven and interpretable artificial intelligence to understand complex biological systems and advance precision genome engineering.</p>
+  <!-- =======================================================
+       MAIN CONTENT
+  ======================================================== -->
+
+  <main id="main-content">
+
+    <!-- =====================================================
+         HOME / HERO
+    ====================================================== -->
+
+    <section
+      id="home"
+      class="hero section"
+      aria-labelledby="hero-title"
+    >
+      <div class="hero-container">
+
+        <div class="hero-content">
+
+          <p class="eyebrow">
+            The University of Texas at San Antonio
+          </p>
+
+          <h1 id="hero-title">
+            Artificial Intelligence for Biology and Precision Medicine
+          </h1>
+
+          <p class="hero-description">
+            Ruan's Lab develops computational and artificial intelligence
+            methods to understand complex biological systems, advance genomic
+            research, and support precision medicine.
+          </p>
+
           <div class="hero-actions">
-            <a class="button button-primary" href="#publications">Explore our work <span>↗</span></a>
-            <a class="button button-secondary" href="#positions">Join the lab</a>
+            <a
+              class="button button-primary"
+              href="#publications"
+            >
+              Explore Our Research
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="#positions"
+            >
+              Join the Lab
+            </a>
           </div>
-          <div class="hero-meta" aria-label="Research focus areas">
+
+          <div class="hero-topics">
             <span>Computational Biology</span>
-            <span>Machine Learning</span>
-            <span>Genome Editing</span>
+            <span>Artificial Intelligence</span>
+            <span>Genomics</span>
+            <span>Precision Medicine</span>
           </div>
+
         </div>
 
-        <div class="hero-visual reveal" aria-label="Abstract visualization of biological and computational networks">
-          <div class="visual-card visual-card-main">
-            <div class="visual-label"><span></span> Biological intelligence, decoded</div>
-            <svg class="network" viewBox="0 0 600 590" role="img" aria-label="Abstract molecular and neural network illustration">
+        <div
+          class="hero-visual"
+          aria-label="Abstract visualization of biological and computational networks"
+        >
+          <div class="visual-card">
+
+            <div class="visual-label">
+              AI × Biology
+            </div>
+
+            <svg
+              viewBox="0 0 600 500"
+              role="img"
+              aria-label="Abstract DNA and network visualization"
+            >
               <defs>
-                <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="#78d6c6" stop-opacity=".25"/>
-                </radialGradient>
-                <linearGradient id="lineGradient" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#f15a22" stop-opacity=".2"/>
-                  <stop offset="100%" stop-color="#78d6c6" stop-opacity=".8"/>
+                <linearGradient
+                  id="heroGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    stop-color="#0c2340"
+                  />
+                  <stop
+                    offset="100%"
+                    stop-color="#f15a22"
+                  />
                 </linearGradient>
               </defs>
-              <g class="network-lines">
-                <path d="M63 392L163 300L250 390L350 242L468 332L548 222"/>
-                <path d="M93 168L202 235L315 128L427 200L515 112"/>
-                <path d="M163 300L202 235L350 242L427 200L468 332"/>
-                <path d="M250 390L287 493L411 447L468 332"/>
-                <path d="M93 168L63 392M315 128L350 242M515 112L548 222"/>
+
+              <!-- Network lines -->
+              <g
+                fill="none"
+                stroke="#0c2340"
+                stroke-width="2"
+                opacity="0.25"
+              >
+                <path d="M70 120 L180 80 L280 145 L390 90 L510 150" />
+                <path d="M90 300 L190 235 L300 310 L420 240 L520 330" />
+                <path d="M180 80 L190 235" />
+                <path d="M280 145 L300 310" />
+                <path d="M390 90 L420 240" />
+                <path d="M70 120 L90 300" />
+                <path d="M510 150 L520 330" />
               </g>
-              <g class="network-nodes">
-                <circle cx="63" cy="392" r="11"/><circle cx="93" cy="168" r="8"/>
-                <circle cx="163" cy="300" r="17"/><circle cx="202" cy="235" r="8"/>
-                <circle cx="250" cy="390" r="9"/><circle cx="287" cy="493" r="14"/>
-                <circle cx="315" cy="128" r="14"/><circle cx="350" cy="242" r="22"/>
-                <circle cx="411" cy="447" r="8"/><circle cx="427" cy="200" r="10"/>
-                <circle cx="468" cy="332" r="16"/><circle cx="515" cy="112" r="8"/>
-                <circle cx="548" cy="222" r="12"/>
+
+              <!-- Network nodes -->
+              <g fill="url(#heroGradient)">
+                <circle cx="70" cy="120" r="12" />
+                <circle cx="180" cy="80" r="15" />
+                <circle cx="280" cy="145" r="11" />
+                <circle cx="390" cy="90" r="16" />
+                <circle cx="510" cy="150" r="12" />
+                <circle cx="90" cy="300" r="14" />
+                <circle cx="190" cy="235" r="10" />
+                <circle cx="300" cy="310" r="17" />
+                <circle cx="420" cy="240" r="11" />
+                <circle cx="520" cy="330" r="15" />
               </g>
-              <g class="dna" transform="translate(140,90) rotate(-10)">
-                <path d="M0 0C90 60 90 160 0 220S-90 380 0 450"/>
-                <path d="M90 0C0 60 0 160 90 220S180 380 90 450"/>
-                <path d="M26 22h38M11 68h68M3 119h84M13 171h65M30 214h31M22 255h46M7 306h76M6 356h78M22 407h47M36 442h20"/>
+
+              <!-- DNA-style curves -->
+              <g
+                fill="none"
+                stroke-linecap="round"
+              >
+                <path
+                  d="M150 390 C210 330, 250 450, 310 390 C370 330, 410 450, 470 390"
+                  stroke="#0c2340"
+                  stroke-width="8"
+                />
+
+                <path
+                  d="M150 420 C210 480, 250 360, 310 420 C370 480, 410 360, 470 420"
+                  stroke="#f15a22"
+                  stroke-width="8"
+                />
+
+                <g
+                  stroke="#6b7280"
+                  stroke-width="3"
+                  opacity="0.65"
+                >
+                  <line x1="178" y1="369" x2="178" y2="441" />
+                  <line x1="228" y1="379" x2="228" y2="431" />
+                  <line x1="280" y1="409" x2="280" y2="401" />
+                  <line x1="332" y1="379" x2="332" y2="431" />
+                  <line x1="384" y1="369" x2="384" y2="441" />
+                  <line x1="435" y1="389" x2="435" y2="421" />
+                </g>
               </g>
             </svg>
+
           </div>
-          <div class="floating-stat stat-one"><strong>AI</strong><span>for biological discovery</span></div>
-          <div class="floating-stat stat-two"><strong>Multi-omics</strong><span>to mechanistic insight</span></div>
         </div>
-      </div>
-      <a class="scroll-cue" href="#mission" aria-label="Scroll to next section"><span></span>Scroll to discover</a>
-    </section>
 
-    <section class="mission section" id="mission">
-      <div class="container mission-grid">
-        <p class="section-number">01 / Mission</p>
-        <div class="mission-copy reveal">
-          <p class="display-quote">We bridge <em>artificial intelligence</em> and <em>biology</em> to uncover patterns that matter—from molecules and cells to health and disease.</p>
-          <p>Our lab creates rigorous computational methods, open tools, and collaborative research that make complex biological data more interpretable and actionable.</p>
-        </div>
-      </div>
-
-      <div class="container research-grid">
-        <article class="research-card reveal">
-          <span class="card-index">01</span>
-          <div class="card-icon">⌁</div>
-          <h3>AI for Genome Editing</h3>
-          <p>Predicting CRISPR base-editing efficiency, product distributions, and context-dependent outcomes.</p>
-          <span class="card-link">Sequence → outcome</span>
-        </article>
-        <article class="research-card reveal">
-          <span class="card-index">02</span>
-          <div class="card-icon">✦</div>
-          <h3>Interpretable Machine Learning</h3>
-          <p>Building models that expose the biological signals behind their predictions and uncertainty.</p>
-          <span class="card-link">Prediction → insight</span>
-        </article>
-        <article class="research-card reveal">
-          <span class="card-index">03</span>
-          <div class="card-icon">◉</div>
-          <h3>Multi-omics Integration</h3>
-          <p>Combining genomic and epigenomic evidence to model cellular context and regulation.</p>
-          <span class="card-link">Data → mechanism</span>
-        </article>
       </div>
     </section>
 
-    <section class="team section section-dark" id="team">
-      <div class="container section-heading reveal">
+    <!-- =====================================================
+         ABOUT THE LAB
+    ====================================================== -->
+
+    <section class="section intro-section">
+      <div class="section-container intro-grid">
+
         <div>
-          <p class="section-number">02 / Team</p>
-          <h2>People behind<br>the research.</h2>
+          <p class="section-label">About the Lab</p>
+
+          <h2>
+            Building computational methods for complex biological questions
+          </h2>
         </div>
-        <p>We are a collaborative group of computer scientists and computational biologists working across disciplines.</p>
-      </div>
 
-      <div class="container team-grid">
-        <article class="person-card person-featured reveal">
-          <div class="person-photo placeholder-photo">
-            <span>JR</span>
-            <div class="photo-grid"></div>
-          </div>
-          <div class="person-info">
-            <p class="person-role">Principal Investigator</p>
-            <h3>Jianhua Ruan, Ph.D.</h3>
-            <p>Professor of Computer Science · UTSA</p>
-            <a href="#contact">View profile <span>↗</span></a>
-          </div>
-        </article>
-
-        <article class="person-card reveal">
-          <div class="person-photo placeholder-photo alt"><span>NM</span></div>
-          <div class="person-info">
-            <p class="person-role">Ph.D. Researcher</p>
-            <h3>Lab Member</h3>
-            <p>AI for computational biology</p>
-          </div>
-        </article>
-
-        <article class="person-card reveal">
-          <div class="person-photo placeholder-photo alt-two"><span>+</span></div>
-          <div class="person-info">
-            <p class="person-role">Future Collaborator</p>
-            <h3>Join the Team</h3>
-            <p>Ph.D., M.S., and undergraduate researchers</p>
-            <a href="#positions">See opportunities <span>↗</span></a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="publications section" id="publications">
-      <div class="container section-heading reveal">
         <div>
-          <p class="section-number">03 / Publications</p>
-          <h2>Selected work.</h2>
-        </div>
-        <p>Replace these examples with publications from the lab’s BibTeX, Google Scholar, or ORCID records.</p>
-      </div>
+          <p class="large-text">
+            Our research brings together machine learning, data science,
+            genomics, and computational biology to better understand biological
+            systems and improve biomedical discovery.
+          </p>
 
-      <div class="container publication-list">
-        <article class="publication reveal" data-year="2026">
-          <div class="pub-meta"><span>2026</span><span>Journal article</span></div>
-          <div class="pub-body">
-            <h3>Context-aware machine learning for precision genome engineering</h3>
-            <p>J. Ruan, Lab Members, and Collaborators</p>
+          <p>
+            We are interested in developing accurate, interpretable, and
+            responsible computational approaches that can contribute to
+            scientific discovery and precision health.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PEOPLE
+    ====================================================== -->
+
+    <section
+      id="people"
+      class="section section-alt"
+      aria-labelledby="people-title"
+    >
+      <div class="section-container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Our Team</p>
+
+            <h2 id="people-title">
+              People
+            </h2>
           </div>
-          <a href="#" aria-label="Open publication">↗</a>
-        </article>
-        <article class="publication reveal" data-year="2025">
-          <div class="pub-meta"><span>2025</span><span>Conference paper</span></div>
-          <div class="pub-body">
-            <h3>Interpretable representations of complex biological systems</h3>
-            <p>J. Ruan, Lab Members, and Collaborators</p>
+
+          <p>
+            Meet the researchers, students, and collaborators who contribute
+            to the lab's work.
+          </p>
+        </div>
+
+        <!-- Principal investigator -->
+        <div class="pi-card">
+
+          <div class="pi-photo">
+            <img
+              src="assets/images/jianhua-ruan.jpg"
+              alt="Dr. Jianhua Ruan"
+            />
           </div>
-          <a href="#" aria-label="Open publication">↗</a>
-        </article>
-        <article class="publication reveal" data-year="2024">
-          <div class="pub-meta"><span>2024</span><span>Journal article</span></div>
-          <div class="pub-body">
-            <h3>Integrating genomic and epigenomic data with artificial intelligence</h3>
-            <p>J. Ruan, Lab Members, and Collaborators</p>
+
+          <div class="pi-content">
+            <p class="person-role">
+              Principal Investigator
+            </p>
+
+            <h3>
+              Dr. Jianhua Ruan
+            </h3>
+
+            <p>
+              Professor of Computer Science at The University of Texas at
+              San Antonio.
+            </p>
+
+            <p>
+              Research interests include computational biology, bioinformatics,
+              machine learning, network biology, genomics, and biomedical data
+              science.
+            </p>
+
+            <div class="person-links">
+              <a href="#" aria-label="View Dr. Ruan's university profile">
+                University Profile
+              </a>
+
+              <a href="#" aria-label="View Dr. Ruan's Google Scholar">
+                Google Scholar
+              </a>
+
+              <a href="#" aria-label="View Dr. Ruan's publications">
+                Publications
+              </a>
+            </div>
           </div>
-          <a href="#" aria-label="Open publication">↗</a>
-        </article>
+
+        </div>
+
+        <!-- Team members -->
+        <div class="people-grid">
+
+          <article class="person-card">
+            <img
+              src="assets/images/person-placeholder.jpg"
+              alt="Team member"
+            />
+
+            <div class="person-card-content">
+              <p class="person-role">
+                Ph.D. Student
+              </p>
+
+              <h3>
+                Student Name
+              </h3>
+
+              <p>
+                Artificial intelligence, computational biology, and genomics.
+              </p>
+
+              <a href="#">
+                View profile
+              </a>
+            </div>
+          </article>
+
+          <article class="person-card">
+            <img
+              src="assets/images/person-placeholder.jpg"
+              alt="Team member"
+            />
+
+            <div class="person-card-content">
+              <p class="person-role">
+                Ph.D. Student
+              </p>
+
+              <h3>
+                Student Name
+              </h3>
+
+              <p>
+                Machine learning, biological networks, and biomedical data.
+              </p>
+
+              <a href="#">
+                View profile
+              </a>
+            </div>
+          </article>
+
+          <article class="person-card">
+            <img
+              src="assets/images/person-placeholder.jpg"
+              alt="Team member"
+            />
+
+            <div class="person-card-content">
+              <p class="person-role">
+                Master's Student
+              </p>
+
+              <h3>
+                Student Name
+              </h3>
+
+              <p>
+                Bioinformatics, data analysis, and precision medicine.
+              </p>
+
+              <a href="#">
+                View profile
+              </a>
+            </div>
+          </article>
+
+          <article class="person-card">
+            <img
+              src="assets/images/person-placeholder.jpg"
+              alt="Team member"
+            />
+
+            <div class="person-card-content">
+              <p class="person-role">
+                Undergraduate Researcher
+              </p>
+
+              <h3>
+                Student Name
+              </h3>
+
+              <p>
+                Computational biology and research software development.
+              </p>
+
+              <a href="#">
+                View profile
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="section-link">
+          <a href="#">
+            View current members and alumni
+          </a>
+        </div>
+
       </div>
-      <div class="container section-action"><a class="text-link" href="#">View all publications <span>↗</span></a></div>
     </section>
 
-    <section class="positions section" id="positions">
-      <div class="container positions-panel reveal">
-        <div class="positions-copy">
-          <p class="section-number">04 / Open Positions</p>
-          <h2>Curious minds<br>are welcome.</h2>
-          <p>We welcome motivated students interested in machine learning, computational biology, genomics, and interdisciplinary research.</p>
-          <a class="button button-light" href="mailto:YOUR_EMAIL@utsa.edu?subject=Interest%20in%20Ruan's%20Lab">Introduce yourself <span>↗</span></a>
+    <!-- =====================================================
+         RECENT NEWS
+    ====================================================== -->
+
+    <section
+      id="news"
+      class="section"
+      aria-labelledby="news-title"
+    >
+      <div class="section-container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Lab Updates</p>
+
+            <h2 id="news-title">
+              Recent News
+            </h2>
+          </div>
+
+          <p>
+            Publications, awards, presentations, collaborations, and other
+            recent activities from the lab.
+          </p>
         </div>
-        <div class="positions-list">
-          <div class="position-item"><span>01</span><div><h3>Ph.D. Students</h3><p>Computational biology · AI/ML · bioinformatics</p></div><b>Open</b></div>
-          <div class="position-item"><span>02</span><div><h3>Master’s Researchers</h3><p>Research projects and thesis opportunities</p></div><b>Inquire</b></div>
-          <div class="position-item"><span>03</span><div><h3>Undergraduate Researchers</h3><p>Research experience and independent study</p></div><b>Inquire</b></div>
+
+        <div class="news-list">
+
+          <article class="news-item">
+            <time datetime="2026-07">
+              July 2026
+            </time>
+
+            <div>
+              <h3>
+                New research update
+              </h3>
+
+              <p>
+                Add a short description of a recent publication, award,
+                conference presentation, or laboratory achievement.
+              </p>
+            </div>
+
+            <a href="#" aria-label="Read more about the new research update">
+              Read more
+            </a>
+          </article>
+
+          <article class="news-item">
+            <time datetime="2026-06">
+              June 2026
+            </time>
+
+            <div>
+              <h3>
+                Lab member presents research
+              </h3>
+
+              <p>
+                Add information about a recent conference, invited talk,
+                poster presentation, or research symposium.
+              </p>
+            </div>
+
+            <a href="#" aria-label="Read more about the presentation">
+              Read more
+            </a>
+          </article>
+
+          <article class="news-item">
+            <time datetime="2026-05">
+              May 2026
+            </time>
+
+            <div>
+              <h3>
+                New publication accepted
+              </h3>
+
+              <p>
+                Add the publication title, journal, conference, and a brief
+                explanation of the research contribution.
+              </p>
+            </div>
+
+            <a href="#" aria-label="Read more about the publication">
+              Read more
+            </a>
+          </article>
+
+          <article class="news-item">
+            <time datetime="2026-04">
+              April 2026
+            </time>
+
+            <div>
+              <h3>
+                Welcome to a new lab member
+              </h3>
+
+              <p>
+                Introduce a new graduate student, undergraduate researcher,
+                visiting researcher, or collaborator.
+              </p>
+            </div>
+
+            <a href="#" aria-label="Read more about the new lab member">
+              Read more
+            </a>
+          </article>
+
         </div>
+
       </div>
     </section>
 
-    <section class="gallery section" id="gallery">
-      <div class="container section-heading reveal">
-        <div>
-          <p class="section-number">05 / Gallery</p>
-          <h2>Life in the lab.</h2>
-        </div>
-        <p>Research talks, conferences, group celebrations, workshops, and everyday moments.</p>
-      </div>
+    <!-- =====================================================
+         PUBLICATIONS
+    ====================================================== -->
 
-      <div class="gallery-grid reveal">
-        <figure class="gallery-item gallery-large"><div class="gallery-placeholder gp-one"><span>Conference & presentations</span></div></figure>
-        <figure class="gallery-item"><div class="gallery-placeholder gp-two"><span>Lab meetings</span></div></figure>
-        <figure class="gallery-item"><div class="gallery-placeholder gp-three"><span>Research in action</span></div></figure>
-        <figure class="gallery-item gallery-wide"><div class="gallery-placeholder gp-four"><span>Milestones & celebrations</span></div></figure>
+    <section
+      id="publications"
+      class="section section-alt"
+      aria-labelledby="publications-title"
+    >
+      <div class="section-container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Research Output</p>
+
+            <h2 id="publications-title">
+              Publications
+            </h2>
+          </div>
+
+          <p>
+            Selected recent publications from Ruan's Lab.
+          </p>
+        </div>
+
+        <div class="publications-list">
+
+          <article class="publication-card">
+
+            <div class="publication-year">
+              2026
+            </div>
+
+            <div class="publication-content">
+              <p class="publication-journal">
+                Journal or Conference Name
+              </p>
+
+              <h3>
+                Add the title of the publication here
+              </h3>
+
+              <p class="publication-authors">
+                Author One, Author Two, Author Three, and Jianhua Ruan
+              </p>
+
+              <p>
+                Add a brief one- or two-sentence summary of the publication's
+                main contribution.
+              </p>
+
+              <div class="publication-links">
+                <a href="#">Paper</a>
+                <a href="#">Code</a>
+                <a href="#">Data</a>
+                <a href="#">DOI</a>
+              </div>
+            </div>
+
+          </article>
+
+          <article class="publication-card">
+
+            <div class="publication-year">
+              2025
+            </div>
+
+            <div class="publication-content">
+              <p class="publication-journal">
+                Journal or Conference Name
+              </p>
+
+              <h3>
+                Add another publication title here
+              </h3>
+
+              <p class="publication-authors">
+                Author One, Author Two, and Jianhua Ruan
+              </p>
+
+              <p>
+                Add a concise description of the study and its importance.
+              </p>
+
+              <div class="publication-links">
+                <a href="#">Paper</a>
+                <a href="#">Code</a>
+                <a href="#">DOI</a>
+              </div>
+            </div>
+
+          </article>
+
+          <article class="publication-card">
+
+            <div class="publication-year">
+              2025
+            </div>
+
+            <div class="publication-content">
+              <p class="publication-journal">
+                Journal or Conference Name
+              </p>
+
+              <h3>
+                Add another publication title here
+              </h3>
+
+              <p class="publication-authors">
+                Author One, Author Two, Author Three, and Jianhua Ruan
+              </p>
+
+              <p>
+                Add a short summary of the methods, data, and scientific
+                contribution.
+              </p>
+
+              <div class="publication-links">
+                <a href="#">Paper</a>
+                <a href="#">Supplement</a>
+                <a href="#">DOI</a>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+        <div class="section-actions">
+          <a
+            class="button button-primary"
+            href="#"
+          >
+            View All Publications
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="#"
+          >
+            Google Scholar
+          </a>
+        </div>
+
       </div>
     </section>
 
-    <section class="contact section section-dark" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-intro reveal">
-          <p class="section-number">06 / Contact</p>
-          <h2>Let’s discover<br>what’s next.</h2>
-          <p>For research collaborations, student opportunities, or questions about our work, please get in touch.</p>
+    <!-- =====================================================
+         TEACHING
+    ====================================================== -->
+
+    <section
+      id="teaching"
+      class="section"
+      aria-labelledby="teaching-title"
+    >
+      <div class="section-container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Education</p>
+
+            <h2 id="teaching-title">
+              Teaching
+            </h2>
+          </div>
+
+          <p>
+            Courses, educational materials, and student learning opportunities.
+          </p>
         </div>
-        <div class="contact-details reveal">
-          <div class="contact-row"><span>Email</span><a href="mailto:YOUR_EMAIL@utsa.edu">YOUR_EMAIL@utsa.edu</a></div>
-          <div class="contact-row"><span>Department</span><p>Department of Computer Science<br>The University of Texas at San Antonio</p></div>
-          <div class="contact-row"><span>Address</span><p>One UTSA Circle<br>San Antonio, TX 78249</p></div>
-          <div class="contact-row"><span>Links</span><p><a href="#">Google Scholar ↗</a><br><a href="#">GitHub ↗</a><br><a href="#">UTSA Profile ↗</a></p></div>
+
+        <div class="teaching-grid">
+
+          <article class="teaching-card">
+            <p class="course-code">
+              CS XXXX
+            </p>
+
+            <h3>
+              Bioinformatics
+            </h3>
+
+            <p>
+              Introduces computational methods for biological data analysis,
+              sequence analysis, genomics, and systems biology.
+            </p>
+
+            <div class="course-meta">
+              <span>Graduate Course</span>
+              <span>UTSA</span>
+            </div>
+
+            <a href="#">
+              Course information
+            </a>
+          </article>
+
+          <article class="teaching-card">
+            <p class="course-code">
+              CS XXXX
+            </p>
+
+            <h3>
+              Machine Learning
+            </h3>
+
+            <p>
+              Covers foundational machine-learning methods and their
+              applications to computational and scientific problems.
+            </p>
+
+            <div class="course-meta">
+              <span>Graduate Course</span>
+              <span>UTSA</span>
+            </div>
+
+            <a href="#">
+              Course information
+            </a>
+          </article>
+
+          <article class="teaching-card">
+            <p class="course-code">
+              CS XXXX
+            </p>
+
+            <h3>
+              Computational Biology
+            </h3>
+
+            <p>
+              Explores algorithmic and statistical methods for modeling
+              biological systems and analyzing high-dimensional data.
+            </p>
+
+            <div class="course-meta">
+              <span>Special Topics</span>
+              <span>UTSA</span>
+            </div>
+
+            <a href="#">
+              Course information
+            </a>
+          </article>
+
         </div>
+
       </div>
     </section>
+
+    <!-- =====================================================
+         OPEN POSITIONS
+    ====================================================== -->
+
+    <section
+      id="positions"
+      class="section positions-section"
+      aria-labelledby="positions-title"
+    >
+      <div class="section-container positions-container">
+
+        <div class="positions-content">
+          <p class="section-label">
+            Join Our Team
+          </p>
+
+          <h2 id="positions-title">
+            Open Positions
+          </h2>
+
+          <p class="large-text">
+            We welcome motivated students and researchers interested in
+            artificial intelligence, computational biology, genomics,
+            bioinformatics, and biomedical data science.
+          </p>
+
+          <p>
+            Prospective students should provide a curriculum vitae, a brief
+            description of their research interests, relevant experience,
+            and academic background.
+          </p>
+
+          <a
+            class="button button-primary"
+            href="mailto:YOUR_EMAIL@utsa.edu?subject=Prospective%20Student%20Inquiry"
+          >
+            Contact the Lab
+          </a>
+        </div>
+
+        <div class="position-types">
+
+          <article>
+            <span class="position-number">
+              01
+            </span>
+
+            <div>
+              <h3>
+                Ph.D. Students
+              </h3>
+
+              <p>
+                Opportunities may be available for students interested in
+                machine learning, computational biology, and genomics.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span class="position-number">
+              02
+            </span>
+
+            <div>
+              <h3>
+                Master's Students
+              </h3>
+
+              <p>
+                Master's students may participate in research projects,
+                independent studies, and thesis-based work.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span class="position-number">
+              03
+            </span>
+
+            <div>
+              <h3>
+                Undergraduate Researchers
+              </h3>
+
+              <p>
+                Undergraduate students with programming, mathematics, or
+                biology experience are encouraged to contact the lab.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span class="position-number">
+              04
+            </span>
+
+            <div>
+              <h3>
+                Visiting Researchers
+              </h3>
+
+              <p>
+                We welcome inquiries from researchers interested in
+                collaboration or short-term academic visits.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section
+      id="contact"
+      class="section"
+      aria-labelledby="contact-title"
+    >
+      <div class="section-container">
+
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Get in Touch</p>
+
+            <h2 id="contact-title">
+              Contact
+            </h2>
+          </div>
+
+          <p>
+            Contact Ruan's Lab for research collaborations, student
+            opportunities, and academic inquiries.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-details">
+
+            <div class="contact-item">
+              <p class="contact-label">
+                Email
+              </p>
+
+              <a href="mailto:YOUR_EMAIL@utsa.edu">
+                YOUR_EMAIL@utsa.edu
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <p class="contact-label">
+                Department
+              </p>
+
+              <p>
+                Department of Computer Science
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <p class="contact-label">
+                University
+              </p>
+
+              <p>
+                The University of Texas at San Antonio
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <p class="contact-label">
+                Address
+              </p>
+
+              <address>
+                Ruan's Lab<br />
+                Department of Computer Science<br />
+                The University of Texas at San Antonio<br />
+                San Antonio, Texas, USA
+              </address>
+            </div>
+
+          </div>
+
+          <div class="contact-card">
+            <p class="section-label">
+              Connect
+            </p>
+
+            <h3>
+              Research and collaboration inquiries
+            </h3>
+
+            <p>
+              Please include a short description of your inquiry, research
+              interests, and relevant background.
+            </p>
+
+            <a
+              class="button button-primary"
+              href="mailto:YOUR_EMAIL@utsa.edu"
+            >
+              Send an Email
+            </a>
+
+            <div class="social-links">
+              <a href="#">GitHub</a>
+              <a href="#">Google Scholar</a>
+              <a href="#">ORCID</a>
+              <a href="#">UTSA Profile</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <a class="brand footer-brand" href="#home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64"><path d="M18 10c22 7 6 37 28 44"/><path d="M46 10c-22 7-6 37-28 44"/><path d="M20 18h24M17 28h30M17 38h30M20 48h24"/></svg>
-        </span>
-        <span class="brand-copy"><strong>Ruan's Lab</strong><small>UTSA</small></span>
-      </a>
-      <p>© <span id="year"></span> Ruan's Lab. All rights reserved.</p>
-      <a class="back-top" href="#top">Back to top ↑</a>
+    <div class="footer-container">
+
+      <div class="footer-column footer-brand">
+        <h2>
+          Ruan's Lab
+        </h2>
+
+        <p>
+          Artificial Intelligence and Computational Biology
+        </p>
+
+        <p>
+          The University of Texas at San Antonio
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>
+          Contact
+        </h3>
+
+        <address>
+          Ruan's Lab<br />
+          Department of Computer Science<br />
+          The University of Texas at San Antonio<br />
+          San Antonio, Texas, USA
+        </address>
+
+        <a href="mailto:YOUR_EMAIL@utsa.edu">
+          YOUR_EMAIL@utsa.edu
+        </a>
+      </div>
+
+      <div class="footer-column">
+        <h3>
+          Navigate
+        </h3>
+
+        <a href="#people">People</a>
+        <a href="#news">Recent News</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#positions">Open Positions</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>
+          External Links
+        </h3>
+
+        <a href="#">
+          UTSA
+        </a>
+
+        <a href="#">
+          Department of Computer Science
+        </a>
+
+        <a href="#">
+          GitHub
+        </a>
+
+        <a href="#">
+          Google Scholar
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+        © <span id="current-year"></span> Ruan's Lab.
+        All rights reserved.
+      </p>
+
+      <p>
+        Website content licensed under
+        <a
+          href="https://creativecommons.org/licenses/by/4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CC BY 4.0
+        </a>.
+      </p>
+
     </div>
   </footer>
+
+  <!-- Website JavaScript -->
+  <script src="assets/script.js"></script>
+
 </body>
 </html>
